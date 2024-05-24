@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Description API Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+<script>
+    $(document).ready(function () {
+
+        console.log(navigator.userAgent)
+
+        // Replace the URL with the actual URL of your API endpoint
+        const apiUrl = 'http://127.0.0.1:8000/recruiterApis/jobDescriptionRegister';
+
+        // Sample data to be sent in the request
+        const requestData = {
+            "job_position_id": "BroaderAI_job_position_6d9xkfg8wr0nvml",
+            "job_level_id": "BroaderAI_job_level_gcs56oghq4ae0gf",
+            "user_id": "BroaderAI_firsetest3_0yyhogjnlh",
+            "number_of_vacancy": "11",
+            "salary_max": "21000",
+            "salary_min": "15000",
+            "job_title": "Python Developer", // Fix: Added a comma after "Python Developer"
+            "job_description_action": "active"
+        };
+
+        $.ajax({
+            type: 'POST',
+            url: apiUrl,
+            data: requestData,
+            dataType: 'json',
+
+            success: function (response) {
+                console.log('API Response:', response);
+                // Handle success here
+            },
+            error: function (error) {
+                console.error('API Error:', error);
+                // Handle error here
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
+
