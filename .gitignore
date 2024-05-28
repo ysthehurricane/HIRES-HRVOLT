@@ -1,0 +1,5 @@
+./env
+
+# Ignore all files inside migrations folders except __init__.py
+hrvolt/**/migrations/*
+!hrvolt/**/migrations/__init__.py
