@@ -7,7 +7,7 @@ There are mainly two folders:
 
 #### Prerequisites:
 
-- Install Python : 3.9.0 >= above
+- Install Python : 3.9.0 >= 3.11.0
 - Postgres Database : version 14
 - Pgadmin 4 : https://www.pgadmin.org/download/ 
 
